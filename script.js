@@ -1,7 +1,7 @@
 let container = document.querySelector(".container");
 
 //fixed to 960 pixels;
-let pixels = 960;
+let pixels = 760;
 
 function createGrid(gridSize) {
 

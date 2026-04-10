@@ -5,15 +5,14 @@ body {
 .container {
     background-color: black;
     display : flex;
-    height : 960px;
-    width : 960px;
+    height : 700px;
+    width : 700px;
     /* border : 1px solid black; */
 }
 
 .main-container {
     display : flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 button {
