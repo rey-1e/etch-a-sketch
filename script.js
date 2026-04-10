@@ -69,10 +69,12 @@ function getRandomColor() {
 /////////////////////////////////////////////////////////////
 container.addEventListener("mouseover", (evt) => {
     if(evt.target != container) {
+        if(evt.target.style.backgroundColor == "aliceblue") {
+            evt.target.style.backgroundColor = getRandomColor(); 
+        }
         if(evt.target.style.opacity > 0) {
         evt.target.style.opacity -= 0.1;
         }
-        evt.target.style.backgroundColor = getRandomColor(); 
     }    
 })
 
