@@ -13,6 +13,8 @@ container.innerHTML = "";
 /////////////////////////////////////////
 let box = document.createElement("div");
 box.style.boxSizing = "border-box";
+box.style.backgroundColor = "aliceblue";
+box.style.opacity = "1";
 
 let boxEdge = pixels / gridSize;
 
@@ -52,12 +54,25 @@ button.addEventListener("click", () => {
     createGrid(val);
 })
 
+//function to get a random color: 
+function getRandomColor() {
+    let r = Math.floor(Math.random() * 257);
+    let g = Math.floor(Math.random() * 257);
+    let b = Math.floor(Math.random() * 257);
+
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+
 //////////////////////////////////////////////////////////////
 //event listener to track mouseover and make relevant changes
 /////////////////////////////////////////////////////////////
 container.addEventListener("mouseover", (evt) => {
     if(evt.target != container) {
-        evt.target.style.backgroundColor = "black"; 
+        if(evt.target.style.opacity > 0) {
+        evt.target.style.opacity -= 0.1;
+        }
+        evt.target.style.backgroundColor = getRandomColor(); 
     }    
 })
 
